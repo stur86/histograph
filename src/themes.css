@@ -1,0 +1,19 @@
+.theme-default {
+    --primary-0: #EC604E;
+    --primary-1: #FFE3E0;
+    --primary-2: #FF9C8F;
+    --primary-3: #B92C19;
+    --primary-4: #620B00;
+
+    --secondary-1-0: #338092;
+    --secondary-1-1: #D6EEF3;
+    --secondary-1-2: #6DB0BF;
+    --secondary-1-3: #136072;
+    --secondary-1-4: #01323D;
+
+    --secondary-2-0: #A0DA48;
+    --secondary-2-1: #F0FDDE;
+    --secondary-2-2: #C8F287;
+    --secondary-2-3: #70AA17;
+    --secondary-2-4: #375B00;
+}
