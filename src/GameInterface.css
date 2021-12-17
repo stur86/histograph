@@ -5,4 +5,64 @@
     background-color: var(--secondary-1-4);
 
     display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.game-grid .number-square {
+    background-color: var(--primary-0);
+    color: var(--secondary-1-1);
+    font-size: 2vw;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 8px solid var(--primary-3);
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+.game-grid .number-square.selected {
+    border-color: var(--primary-0);
+    background-color: var(--primary-2);
+}
+
+.game-grid .number-square.candidate {
+    border-color: var(--primary-0);
+    background-color: var(--primary-3);
+}
+
+.game-grid .number-circle {
+    background-color: var(--secondary-1-2);
+    color: var(--secondary-2-1);
+    font-size: 1.5vw;
+    font-weight: bold;
+
+    width: 50%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    border: 10px solid var(--secondary-1-4);
+    border-radius: 100%;
+
+    transform: translate(150%, 150%);
 }

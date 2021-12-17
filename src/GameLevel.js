@@ -86,6 +86,16 @@ class GameLevel {
         return this._shuffled;
     }
 
+    getValue(i, j, solution=false) {
+        let M = solution? this._solmat : this._mat;
+        return M[i][j];
+    }
+
+    getSumValue(i, j, solution=false) {
+        let M = solution? this._solsums : this._sums;
+        return M[i][j];
+    }
+
     swap(i1, j1, i2, j2) {        
 
         let v1 = this._mat[i1][j1];
