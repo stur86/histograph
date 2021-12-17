@@ -62,7 +62,8 @@ function getNeighbour(i, j, n) {
 class GameLevel {
 
     constructor(size=4) {
-        this.n = size;
+        this._n = size;
+        this._shuffled = 0;
 
         // Generate the number matrix
         this._solmat = makeMatrix(size, () => (_.random(0, MAX_NUM)));
@@ -75,6 +76,14 @@ class GameLevel {
         this._mat = _.cloneDeep(this._solmat);
         this._sums = _.cloneDeep(this._solsums);
         this._hist = _.cloneDeep(this._solhist);
+    }
+
+    get n() {
+        return this._n;
+    }
+
+    get shuffled() {
+        return this._shuffled;
     }
 
     swap(i1, j1, i2, j2) {        
@@ -143,6 +152,7 @@ class GameLevel {
 
             // Do the swap
             this.swap(...maxswap);
+            this._shuffled++;
         }
     }
 }
