@@ -5,39 +5,17 @@ function HistogramBar(props) {
     const v = props.value;
     const t = props.target;
 
-    const h = Math.max(v, t);
-
-    const style = {
-        ...props.style,
-        height: h*100 + '%'
+    const valueStyle = {
+        height: (v*100)+'%'
     };
 
-    let vp = 0;
-    let tp = 0;
-    let op = 0;
+    const targetStyle = {
+        height: (t*100)+'%'
+    };
 
-    if (h === v) {
-        // Value greater than target
-        vp = (v-t)/v;
-        tp = 0;
-        op = 1-vp;
-    }
-    else {
-        vp = 0;
-        tp = (t-v)/t;
-        op = 1-tp;
-    }
-
-
-    let children = [
-        <div className='target' style={{ height: (tp*100) + '%' }}/>,
-        <div className='value' style={{ height: (vp*100) + '%' }}/>,
-        <div className='overlap' style={{ height: (op*100) + '%' }}/>
-    ];
-
-
-    return (<div style={style} className='histo-bar'>
-        {children}
+    return (<div style={props.style} className='histo-bar'>
+        <div className='target-bar' style={targetStyle}/>
+        <div className='value-bar' style={valueStyle}/>
     </div>);
 }
 

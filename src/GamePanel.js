@@ -15,7 +15,7 @@ function GamePanel(props) {
         <div className='game-panel'>
             <h1 className='title'>HISTOGRAPH</h1>
             <div className='main'>
-                <GameInterface />
+                <GameInterface n={3}/>
             </div>
         </div>
     </div>);

@@ -12,7 +12,7 @@ function GameInterface(props) {
 
     const [state, setState] = useState(() => {
             let lv = new GameLevel(n);
-            lv.shuffle(1);
+            lv.shuffle(2);
             return {
                 level: lv,
                 turns: 0
