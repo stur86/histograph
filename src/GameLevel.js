@@ -86,6 +86,14 @@ class GameLevel {
         return this._shuffled;
     }
 
+    get maxsum() {
+        return 4*MAX_NUM;
+    }
+
+    get updateFlag() {
+        return this._updateflag;
+    }
+
     getValue(i, j, solution=false) {
         let M = solution? this._solmat : this._mat;
         return M[i][j];
@@ -94,6 +102,11 @@ class GameLevel {
     getSumValue(i, j, solution=false) {
         let M = solution? this._solsums : this._sums;
         return M[i][j];
+    }
+
+    getHistogramValue(n, solution=false) {
+        let H = solution? this._solhist : this._hist;
+        return H[n]/Math.pow(this._n-1, 2);
     }
 
     swap(i1, j1, i2, j2) {        
