@@ -140,12 +140,6 @@ class GameLevel {
     }
 
     shuffle(steps=5, attempts=5) {
-        const dirs = [
-            [0, 1],
-            [1, 0],
-            [0, -1],
-            [-1, 0]
-        ];
 
         // Shuffle the solution board to create a new problem
         for (let s = 0; s < steps; ++s) {
@@ -157,7 +151,6 @@ class GameLevel {
                 // Pick a random pair of adjacent numbers to swap
                 let i1 = _.random(0, this.n-1);
                 let j1 = _.random(0, this.n-1);
-                let d = dirs[_.random(0, 3)];
                 let [i2, j2] = getNeighbour(i1, j1, this.n);
 
                 // Try the swap!

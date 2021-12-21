@@ -1,0 +1,21 @@
+.game-tutorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-tutorial p {
+    margin-top: 30px;
+    padding: 0 10px;
+
+    font-size: 1.3em;
+    color: var(--primary-4);
+
+    text-align: justify;
+}
+
+.tutorial-hist-container {
+    padding: 0 40px;
+    box-sizing: border-box;
+    width: 100%;
+}

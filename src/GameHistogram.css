@@ -1,5 +1,6 @@
 .game-histogram {
     height: 10vw;
+    width: 100%;
 
     margin-top: 1vw;
     padding: 0.5vw;
@@ -7,6 +8,8 @@
     background-color: var(--secondary-1-4);
     color: var(--secondary-1-1);
     border-radius: 10px;
+
+    box-sizing: border-box;
 }
 
 .game-histogram-grid {
@@ -33,7 +36,7 @@
     width: 100%;
     left: 0;
 
-    background-color: var(--secondary-2-1);
+    background-color: var(--primary-0);
 }
 
 .histo-bar > .value-bar {
@@ -43,7 +46,7 @@
     left: 15%;
 
     transition: height 0.5s;
-    background-color: var(--secondary-2-0);
+    background-color: var(--primary-2);
 }
 
 .game-histogram-axis {
@@ -58,6 +61,21 @@
 }
 
 .game-histogram-axis > span {
-    margin: 0px 5px;
     font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+  .game-histogram {
+    height: 30vw;
+    width: 80vw;
+    padding: 2vw;
+  }
+
+  .game-histogram-axis {
+    font-size: 2.5vw;
+    border-width: 2px;
+  }
+
 }

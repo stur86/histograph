@@ -3,4 +3,25 @@
 body {
   margin: 0;
   border: 0;
+
+  font-family: "Karla"
+}
+
+button {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Megrim";
+
+  color: var(--primary-1);
+
+  opacity: 0.8;
+  transition: opacity 0.2s;
+
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+button:hover {
+  opacity: 1;
 }

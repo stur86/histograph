@@ -1,0 +1,17 @@
+.game-menu {
+    padding: 20px;
+    margin-top: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-menu-entry {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.game-menu-entry:hover {
+    opacity: 1;
+}
