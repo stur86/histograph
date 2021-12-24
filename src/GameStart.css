@@ -1,0 +1,80 @@
+.game-start {
+    
+}
+
+.start-param {
+    display: flex;
+    flex-direction: row;
+
+    width: 25vw;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.start-param h2 {
+    font-size: 1.5em;
+}
+
+.counter-control {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--secondary-1-4);
+
+    display: grid;
+    grid-template-columns: 50px 70px 50px;
+    height: 60px;
+
+    cursor: pointer;
+}
+
+.counter-control .cctrl-minus {
+    border: solid 4px var(--secondary-1-4);
+    border-radius: 5px 0 0 5px;
+    border-right: solid 2px var(--secondary-1-4);
+    background-color: var(--primary-0);
+
+    padding: 6px 15px;
+
+    text-align: left;
+}
+
+.counter-control .cctrl-value {
+    border: solid 4px var(--secondary-1-4);
+    border-right: none;
+    border-left: none;
+    color: var(--secondary-1-1);
+    background-color: var(--primary-3);
+
+    padding: 6px 25px;
+    max-width: 70px;
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.counter-control .cctrl-plus {
+    border: solid 4px var(--secondary-1-4);
+    border-radius: 0 5px 5px 0;
+    border-left: solid 2px var(--secondary-1-4);
+    background-color: var(--primary-0);
+
+    padding: 6px 15px;
+
+    text-align: right;
+}
+
+.counter-control .cctrl-minus:hover {
+    background-color: var(--primary-1);
+}
+
+.counter-control .cctrl-plus:hover {
+    background-color: var(--primary-1);
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+  .start-param {
+    width: 85vw;
+  }
+
+}

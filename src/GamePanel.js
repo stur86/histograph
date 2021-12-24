@@ -4,6 +4,7 @@ import './GamePanel.css';
 import GameInterface from './GameInterface';
 import GameMenu from './GameMenu';
 import GameTutorial from './GameTutorial';
+import GameStart from './GameStart';
 
 import React, { useState } from 'react';
 
@@ -16,7 +17,7 @@ function GamePanel(props) {
         data: {}
     });
 
-    function nextScene(new_scene, new_data) {
+    function nextScene(new_scene, new_data={}) {
         setState({
             ...state,
             scene: new_scene, 
@@ -34,7 +35,10 @@ function GamePanel(props) {
             currentScene = <GameTutorial sceneSetter={nextScene}/>;
             break;
         case 'start': 
-            currentScene = <GameInterface n={3} />;
+            currentScene = <GameStart sceneSetter={nextScene} />;
+            break;
+        case 'game': 
+            currentScene = <GameInterface sceneSetter={nextScene} n={state.data.grid} m={state.data.moves}/>;
             break;
         default:
             break;

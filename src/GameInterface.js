@@ -9,10 +9,11 @@ import GameHistogram from './GameHistogram';
 function GameInterface(props) {
 
     const n = props.n || 4;
+    const moves = props.m || 2;
 
     const [state, setState] = useState(() => {
             let lv = new GameLevel(n);
-            lv.shuffle(2);
+            lv.shuffle(moves);
             return {
                 level: lv,
                 turns: 0
