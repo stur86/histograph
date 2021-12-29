@@ -96,7 +96,7 @@ class GameLevel {
 
     get isWin() {
         let h = this._hist;
-        return this._solhist.reduce((s, x, i) => (s && (x == h[i])), true);
+        return this._solhist.reduce((s, x, i) => (s && (x === h[i])), true);
     }
 
     getValue(i, j, solution=false) {

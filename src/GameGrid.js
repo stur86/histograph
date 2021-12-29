@@ -84,7 +84,7 @@ function GameGrid(props) {
     for (let i = 0; i < lv.n; ++i) {
         for (let j = 0; j < lv.n; ++j) {
             let isSel = (i === state.iSel) && (j === state.jSel);
-            let isCand = ((Math.abs(i-state.iSel) + Math.abs(j-state.jSel)) == 1);
+            let isCand = ((Math.abs(i-state.iSel) + Math.abs(j-state.jSel)) === 1);
             squares.push(<NumberSquare key={squares.length} x={j+1} y={i+1} value={lv.getValue(i,j)}
                 isSelected={isSel} isCandidate={isCand} onClick={() => { processClick(i,j, isSel, isCand);}}/>);
             if (i < lv.n-1 && j < lv.n-1) {

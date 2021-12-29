@@ -27,7 +27,6 @@ function GameHistogram(props) {
         gridTemplateColumns: 'repeat(' + (lv.maxsum+1) + ', 1fr)'
     };
 
-    const solbars = [];
     const bars = [];
     const numbers = [];
 
