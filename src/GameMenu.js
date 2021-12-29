@@ -1,12 +1,14 @@
 import './GameMenu.css';
 
+import { FaQuestionCircle, FaPlay } from 'react-icons/fa';
+
 function GameMenu(props) {
 
     const sceneSetter = props.sceneSetter || (() => {});
 
     return (<div className='game-menu'>
-        <button onClick={() => { sceneSetter('start') }}>New Game</button>
-        <button onClick={() => { sceneSetter('learn') }}>How to Play</button>
+        <FaPlay className='icon-button' onClick={() => { sceneSetter('start') }} />
+        <FaQuestionCircle className='icon-button' onClick={() => { sceneSetter('learn') }} />
     </div>);
 }
 

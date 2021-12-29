@@ -22,9 +22,9 @@ function CounterControl(props) {
     }
 
     return (<div className='counter-control'>
-        <div className='cctrl-minus' onClick={() => {increaseValue(-1)}}>-</div>
-        <div className='cctrl-value'>{props.value}</div>
-        <div className='cctrl-plus' onClick={() => {increaseValue(1)}}>+</div>
+        <div className='cctrl cctrl-minus' onClick={() => {increaseValue(-1)}}>-</div>
+        <div className='cctrl cctrl-value'>{props.value}</div>
+        <div className='cctrl cctrl-plus' onClick={() => {increaseValue(1)}}>+</div>
     </div>)
 }
 
@@ -37,15 +37,17 @@ function GameStart(props) {
     });
 
     return (<div className='game-start'>
-        <div className='start-param'>
-            <h2>Size of grid</h2>
-            <CounterControl value={state.grid} min={3} max={6} 
-            onChange={(v) => { setState({...state, grid: v})}}/>
-        </div>
-        <div className='start-param'>
-            <h2>Number of moves</h2>
-            <CounterControl value={state.moves} min={1} max={5}
-            onChange={(v) => { setState({...state, moves: v})}}/>
+        <div className='start-param-list'>
+            <div className='start-param'>
+                <h2>Size of grid</h2>
+                <CounterControl value={state.grid} min={3} max={6} 
+                onChange={(v) => { setState({...state, grid: v})}}/>
+            </div>
+            <div className='start-param'>
+                <h2>Number of moves</h2>
+                <CounterControl value={state.moves} min={1} max={5}
+                onChange={(v) => { setState({...state, moves: v})}}/>
+            </div>
         </div>
         <div className='start-param' style={{justifyContent: 'center'}}>
             <button onClick={() => { props.sceneSetter('game', state)}}>Start</button>

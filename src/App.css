@@ -13,9 +13,8 @@ button {
   font-family: "Megrim";
 
   color: var(--primary-1);
-
-  opacity: 0.8;
-  transition: opacity 0.2s;
+  text-shadow: 0 2px var(--primary-3);
+  transition: transform 0.2s, text-shadow 0.2s;
 
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
@@ -23,5 +22,6 @@ button {
 }
 
 button:hover {
-  opacity: 1;
+  transform: translateY(1px);
+  text-shadow: 0 1px var(--primary-3);
 }

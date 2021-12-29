@@ -21,7 +21,10 @@ function GamePanel(props) {
         setState({
             ...state,
             scene: new_scene, 
-            data: new_data
+            data: {
+                ...state.data, 
+                ...new_data
+            }
         });
     }
 

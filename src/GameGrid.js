@@ -43,6 +43,11 @@ function GameGrid(props) {
     }
 
     function processClick(i, j, isS, isC) {
+
+        if (!props.active) {
+            return;
+        }
+
         if (isS) {
             // Deselect
             setState({

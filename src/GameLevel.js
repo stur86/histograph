@@ -94,6 +94,11 @@ class GameLevel {
         return this._updateflag;
     }
 
+    get isWin() {
+        let h = this._hist;
+        return this._solhist.reduce((s, x, i) => (s && (x == h[i])), true);
+    }
+
     getValue(i, j, solution=false) {
         let M = solution? this._solmat : this._mat;
         return M[i][j];

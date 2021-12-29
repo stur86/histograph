@@ -7,11 +7,22 @@
     align-items: center;
 }
 
-.game-menu-entry {
-    opacity: 0.8;
-    transition: opacity 0.2s;
+.game-menu .icon-button {
+  font-size: 7em;
+
+  color: var(--primary-1);
+  filter: drop-shadow(0 5px 0 var(--primary-3));
+
+  opacity: 0.8;
+  transition: transform 0.2s, filter  0.2s;
+
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin-bottom: 0.4em;
 }
 
-.game-menu-entry:hover {
-    opacity: 1;
+.game-menu .icon-button:hover {
+  transform: translateY(2px);
+  filter: drop-shadow(0 3px 0 var(--primary-3));
 }
